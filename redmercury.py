@@ -39,7 +39,7 @@ from urllib.parse import urlparse
 import yaml
 
 ####################
-# Usefule Bookmarks:
+# Useful Bookmarks:
 # https://github.com/jrigden/redmercury
 # https://help.apple.com/itc/podcasts_connect/#/itcb54353390
 # https://cyber.harvard.edu/rss/rss.html
