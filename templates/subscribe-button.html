@@ -1,0 +1,22 @@
+<div class="subscribe-button">
+
+
+        <script>
+            window.podcastData = {
+                "title": "{{site.Title}}",
+                "subtitle": "{{site.SubTitle}}",
+                "description": "{{site.Description}}",
+                "cover": "{{site.CoverArtURL}}",
+                "feeds": [{
+                    "type": "audio",
+                    "format": "mp3",
+                    "url": "{{site.BaseURL}}/rss.xml"
+                }]
+            }
+        </script>
+        <script class="podlove-subscribe-button" src="https://cdn.podlove.org/subscribe-button/javascripts/app.js"
+            data-language="en" data-size="big" data-json-data="podcastData" data-color="#ff0000"
+            data-format="rectangle" data-style="filled"></script><noscript><a
+                href="{{site.BaseURL}}.rss.xml">Subscribe to feed</a></noscript>
+
+    </div>

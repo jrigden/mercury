@@ -1,0 +1,5 @@
+    {% if content is defined %}
+    <meta name="description" content="{{ content.Meta.Subtitle }}">
+    {% else %}
+    <meta name="description" content="{{ site.Description }}">
+    {% endif %}

@@ -1,0 +1,19 @@
+<!doctype html>
+<html class="no-js" lang="">
+<head>
+    <meta charset="utf-8">
+    {% if content is defined %}
+    <title>{{ content.Meta.Title }}</title>
+    {% else %}
+    <title>{{ site.Title}}</title>
+    {% endif %}
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% include 'metatags.html' %}
+
+    <link rel="stylesheet" href="https://indestructibletype.com/fonts/Jost.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="{{site.BaseURL}}/redmercury-{{ site.VERSION}}.css">
+  
+</head>
+{% include 'navbar.html' %}
+<main>

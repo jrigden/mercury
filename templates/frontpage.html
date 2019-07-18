@@ -1,0 +1,41 @@
+{% include 'top.html' %}
+<div class="cover-art">
+    <img src="{{site.CoverArtURL}}">
+</div>
+<div class="post">
+
+
+    <div class="post-header">
+        <h1>{{site.Title}}</h1>
+        <h4>{{site.SubTitle}}</h4>
+
+    </div>
+
+
+
+
+    <div class="post-body">
+
+        <p>
+            {{site.Description}}
+        </p>
+        {% include 'subscribe-button.html' %}
+
+        <h3>Episodes</h3>
+        <ul class="subscribe-list">
+            {% for episode in episodes %}
+                <li>
+                    <h4>
+                        <a href="{{site.BaseURL}}/{{ episode.Meta.Slug }}">
+                                {{ episode.Meta.Title }}
+                        </a>
+                    </h4>
+                </li>
+            {% endfor %}
+        </ul>
+
+        {% include 'subscribe-links.html' %}
+
+
+    </div>
+    {% include 'bottom.html' %}

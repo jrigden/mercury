@@ -1,0 +1,47 @@
+{% include 'top.html' %}
+
+<div class="post">
+    {% if content.Meta.FeaturedImage %}
+    <div class="post-image">
+        <img src="{{ content.Meta.FeaturedImage }}">
+    </div>
+    {% endif %}
+
+    <div class="post-header">
+        <h1>{{content.Meta.Title}}</h1>
+
+
+    </div>
+    {% if content.Meta.Enclosure %}
+    <div class="post-player">
+        <audio controls="controls" preload="none">
+                <source src="{{ content.Meta.Enclosure.URL }}" type="audio/mpeg"> 
+        </audio>
+    </div>
+    {% endif %}
+    <div class="post-body">
+        {% if content.Meta.Subtitle %}
+            <p>{{content.Meta.Subtitle}}</p>
+        {% endif %}
+
+        {{ content.Summary|safe }}
+        ssssssssssssssss
+            
+        {{ content.Body|safe }}
+
+
+
+    </div>
+    <div class="post-footer">
+        <h4>Posted:
+            {{ content.Meta.Date }}
+        </h4>
+        <br>
+        <hr>
+        {% include 'subscribe-links.html' %}
+
+
+    </div>
+</div>
+
+{% include 'bottom.html' %}
