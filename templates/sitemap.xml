@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-    {% for loc in locs %}
+    {% for post in posts %}
    <url>
-      <loc>{{site.BaseURL}}/{{ loc.Meta.Slug }}</loc> 
-      <lastmod>{{ loc.Meta.lastmod }}</lastmod>
+      <loc>{{site.baseURL}}/{{ post.meta.Slug }}</loc> 
+      <lastmod>{{ post.meta.datetime.strftime('%Y-%m-%d') }}</lastmod>
    </url>
    {% endfor %}
 </urlset>

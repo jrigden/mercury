@@ -1,7 +1,7 @@
 <nav>
     <div class="nav-bar">
         <div class="nav-left">
-            <a href="{{site.BaseURL}}">{{site.Title}}</a>
+            <a href="{{site.baseURL}}">{{site.title}}</a>
         </div>
 
         <div class="nav-right">
@@ -13,10 +13,10 @@
 
     <div id="nav-menu" class="hidden">
         <ul>
-            {% for item in site.NavLinks %}
+            {% for item in site.links %}
             <li>
-                <a href="{{item.URL}}">
-                        {{item.Name}}
+                <a href="{{item.url}}">
+                        {{item.name}}
                 </a>
             </li>
             {% endfor %}

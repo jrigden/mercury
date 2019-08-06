@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js" lang="">
+<html class="no-js" lang="en">
 <head>
     <meta charset="utf-8">
     {% if content is defined %}
@@ -7,12 +7,13 @@
     {% else %}
     <title>{{ site.Title}}</title>
     {% endif %}
-    <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     {% include 'metatags.html' %}
 
-    <link rel="stylesheet" href="https://indestructibletype.com/fonts/Jost.css" type="text/css" charset="utf-8" />
-    <link rel="stylesheet" href="{{site.BaseURL}}/redmercury-{{ site.VERSION}}.css">
+    <link rel="stylesheet" href="https://files.ipsut.net/share/lib/normalize-8.0.1.css">
+    <style>{% include 'style.css' %}</style>
+
+    {{ site.header}}
   
 </head>
 {% include 'navbar.html' %}
