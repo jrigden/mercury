@@ -24,7 +24,9 @@ GENERATOR = 'redmercury '+ VERSION +' (https://github.com/jrigden/redmercury)'
 ####################
 
 site_path = ''
-file_loader = jinja2.FileSystemLoader('templates')
+home_path = os.path.dirname(os.path.realpath(__file__))
+templats_path = os.path.join(home_path, "templates")
+file_loader = jinja2.FileSystemLoader(templats_path)
 env = jinja2.Environment(loader=file_loader)
 
 parser = argparse.ArgumentParser(description='A static site generator for blogs and podcasts. v' + VERSION)
